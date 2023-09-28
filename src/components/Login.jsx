@@ -68,12 +68,12 @@ const Login = () => {
           <Form onSubmit={handleSubmit}>
             <Form.Group className="mb-3" controlId="email">
               <Form.Label>Email</Form.Label>
-              <Form.Control type="email" ref={userRef} onChange={(e) => setEmail(e.target.value)} value={email} required />
+              <Form.Control type="email" ref={userRef} onChange={(e) => setEmail(e.target.value)} value={email} required style={{ borderRadius: "4px" }} />
             </Form.Group>
 
             <Form.Group className="mb-4" controlId="password">
               <Form.Label>Password</Form.Label>
-              <Form.Control type="password" onChange={(e) => setPassword(e.target.value)} value={password} required />
+              <Form.Control type="password" onChange={(e) => setPassword(e.target.value)} value={password} required style={{ borderRadius: "4px" }} />
             </Form.Group>
 
             <Button type="submit">Login</Button>
