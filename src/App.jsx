@@ -3,6 +3,7 @@ import RequireAuth from "./components/RequireAuth";
 import Layout from "./components/Layout";
 import Login from "./components/Login";
 import Dashboard from "./components/UserDashboard";
+import Lounge from "./components/Lounge";
 import PageNotFound from "./components/PageNotFound";
 
 const ROLES = {
@@ -21,6 +22,7 @@ const App = () => {
         {/* private route */}
         <Route element={<RequireAuth />}>
           <Route path="dashboard" element={<Dashboard />} />
+          <Route path="lounge" element={<Lounge />} />
         </Route>
 
         {/* default */}
