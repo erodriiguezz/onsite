@@ -39,11 +39,13 @@ const Login = () => {
     try {
       const response = await axios.post(LOGIN_URL, JSON.stringify({ email, password }), { headers: { "Content-Type": "application/json" } });
       // const response = await axios.post(LOGIN_URL, JSON.stringify(email, password), { headers: { "Content-Type": "application/json" }, withCredentials: true });
-      const accesstoken = response?.data?.accesstoken;
+      const accessToken = response?.data?.accesstoken;
       // const roles = response?.data?.roles;
-      setAuth({ email, password, accesstoken });
+      setAuth({ email, password, accessToken });
       setEmail("");
       setPassword("");
+      console.log(accessToken);
+
       navigate(from, { replace: true });
     } catch (error) {
       setErrorMessage(error);
