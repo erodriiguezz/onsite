@@ -25,6 +25,11 @@ const App = () => {
           <Route path="lounge" element={<Lounge />} />
         </Route>
 
+        {/* adding role verification to protected routes */}
+        {/* <Route element={<RequireAuth allowedRoles={[ROLES.User]} />}>
+          <Route path="dashboard" element={<Dashboard />} />
+        </Route> */}
+
         {/* default */}
         <Route path="*" element={<PageNotFound />} />
       </Route>
